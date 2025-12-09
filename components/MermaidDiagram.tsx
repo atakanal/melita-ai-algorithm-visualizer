@@ -48,7 +48,7 @@ const MermaidDiagram: React.FC<MermaidDiagramProps> = ({ chart }) => {
         setZoomLevel(1); // Reset zoom on new chart load
       } catch (err) {
         console.error("Mermaid Render Error:", err);
-        setError("Grafik oluşturulamadı.");
+        setError("Failed to render diagram.");
       }
     };
     renderChart();
@@ -61,7 +61,7 @@ const MermaidDiagram: React.FC<MermaidDiagramProps> = ({ chart }) => {
    * and high resolution (3x scale) in the downloaded file.
    */
   const handleDownload = () => {
-    console.log("⬇️ İndirme işlemi başlatıldı...");
+    console.log("⬇️ Download sequence initiated...");
 
     const svgElement = containerRef.current?.querySelector('svg');
     
@@ -91,8 +91,7 @@ const MermaidDiagram: React.FC<MermaidDiagramProps> = ({ chart }) => {
         svgString = svgString.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
     }
 
-    // 🔥 SOLUTION: Use Base64 encoding instead of Blob to avoid charset issues 🔥
-    // encodeURIComponent ensures UTF-8 characters (like Turkish) are preserved correctly
+    // encodeURIComponent ensures UTF-8 characters are preserved correctly
     const base64SVG = window.btoa(unescape(encodeURIComponent(svgString)));
     const dataUrl = `data:image/svg+xml;base64,${base64SVG}`;
 
@@ -102,7 +101,7 @@ const MermaidDiagram: React.FC<MermaidDiagramProps> = ({ chart }) => {
     img.crossOrigin = "Anonymous";
 
     img.onload = () => {
-        console.log("🖼️ Resim Base64 modunda yüklendi.");
+        console.log("🖼️ Image successfully loaded as Base64.");
         
         // 3x Scaling for High-DPI (Retina) quality export
         const scale = 3; 
@@ -131,18 +130,18 @@ const MermaidDiagram: React.FC<MermaidDiagramProps> = ({ chart }) => {
             downloadLink.click();
             document.body.removeChild(downloadLink);
             
-            console.log("🚀 PNG Başarıyla İndirildi!");
+            console.log("🚀 PNG downloaded successfully.");
         } catch (e) {
-            console.error("❌ PNG Dönüşüm Hatası (Tainted Canvas):", e);
+            console.error("❌ PNG Conversion Error (Tainted Canvas):", e);
             // Fallback: Graceful degradation to SVG download if Canvas security blocks export
-            alert("PNG güvenliği aşılamadı, vektör (SVG) olarak indiriliyor.");
+            alert("PNG export blocked due to security restrictions; downloading SVG fallback.");
             downloadSVG(svgString);
         }
     };
 
     img.onerror = (e) => {
-        console.error("❌ Resim yükleme hatası:", e);
-        alert("Görüntü oluşturulamadı. SVG yedeği indiriliyor.");
+        console.error("❌ Image loading error:", e);
+        alert("Image generation failed. Downloading SVG fallback.");
         downloadSVG(svgString);
     };
 
