@@ -47,7 +47,7 @@ Follow these steps to run the Melita AI Engine locally or within your Kaggle env
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/atakanal/melita-ai-algorithm-visualizer.git](https://github.com/atakanal/melita-ai-algorithm-visualizer.git)
+    git clone https://github.com/atakanal/melita-ai-algorithm-visualizer.git
     cd melita-ai-algorithm-visualizer
     ```
 
