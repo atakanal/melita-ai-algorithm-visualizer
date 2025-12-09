@@ -38,7 +38,7 @@ const getFallbackResponse = (error: any): SimulationResponse => {
         classDef error fill:#ef4444,stroke:#7f1d1d,stroke-width:2px,color:#fff
         classDef base fill:#1f2937,stroke:#374151,color:#fff
         classDef skip fill:#374151,stroke:#4b5563,stroke-dasharray: 5 5,color:#9ca3af`,
-      explanation: "**API Kotası Doldu:** Google Gemini API günlük/dakikalık limitine takıldık. Kodunuzda sorun yok, sadece servis şu an cevap veremiyor. Lütfen biraz bekleyip tekrar deneyin.",
+      explanation: "**API Limit Reached:** We have hit the daily/per-minute limit for the Google Gemini API. There is no issue with your code; the service is currently unresponsive. Please wait a moment and try again.",
       timeComplexity: "Unknown",
       spaceComplexity: "Unknown",
       optimizationTip: "Try again later."
@@ -57,7 +57,7 @@ const getFallbackResponse = (error: any): SimulationResponse => {
         classDef error fill:#f59e0b,stroke:#b45309,color:#000
         classDef base fill:#1f2937,stroke:#374151,color:#fff
         classDef result fill:#d1fae5,stroke:#059669,color:#000`,
-      explanation: "**Veri İşleme Hatası:** Yapay zeka cevabı oluştururken teknik bir hata yaptı.",
+      explanation: "**Data Processing Error:** The Artificial Intelligence encountered a technical error during response generation.",
       timeComplexity: "?",
       spaceComplexity: "?",
       optimizationTip: "Simplify the code snippet."
@@ -76,7 +76,7 @@ const getFallbackResponse = (error: any): SimulationResponse => {
       classDef base fill:#d1fae5,stroke:#059669,stroke-width:2px,color:#000
       classDef skip fill:#f3f4f6,stroke:#9ca3af,stroke-width:2px,stroke-dasharray: 5 5,color:#000
       classDef result fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#000`,
-    explanation: `**Görselleştirme Sınırı:** Sistem şu an yoğun veya kod çok karmaşık. Özet gösterim moduna geçildi.\n\nHata Detayı: ${msg}`,
+    explanation: `**Visualization Threshold Reached:** The system is currently under heavy load or the code is excessively complex. Switched to summary display mode.\n\nError Details: ${msg}`,
     timeComplexity: "O(High)",
     spaceComplexity: "O(High)",
     optimizationTip: "Try creating smaller functions."
@@ -91,7 +91,7 @@ const getFallbackResponse = (error: any): SimulationResponse => {
 export const analyzeCodeWithGemini = async (code: string): Promise<SimulationResponse> => {
   // Note: API Key should ideally be in process.env for security
   const API_KEY = ""; 
-  if (!API_KEY) throw new Error("API Anahtarı bulunamadı!");
+  if (!API_KEY) throw new Error("API Key not found.");
 
   const genAI = new GoogleGenerativeAI(API_KEY);
   
@@ -181,7 +181,7 @@ const fileToGenerativePart = async (file: File): Promise<{ inlineData: { data: s
  */
 export const extractCodeFromImage = async (file: File): Promise<string> => {
   const API_KEY = "";
-  if (!API_KEY) throw new Error("API Key bulunamadı!");
+  if (!API_KEY) throw new Error("API Key not found.");
   const genAI = new GoogleGenerativeAI(API_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-3-pro-preview" });
   try {
@@ -190,6 +190,6 @@ export const extractCodeFromImage = async (file: File): Promise<string> => {
     const result = await model.generateContent([`Extract raw code. No markdown.`, imagePart]);
     return result.response.text().trim();
   } catch (error) {
-    throw new Error("Resimden kod okunamadı.");
+    throw new Error("Failed to read code from image.");
   }
 };
