@@ -76,7 +76,9 @@ This project is submitted to the Kaggle Gemini Hackathon, demonstrating superior
 
 * **<img width="1248" height="667" alt="papapappapa" src="https://github.com/user-attachments/assets/eda34c81-a1cc-4abf-b318-0679b108dd10" />**
     *(Showcases the custom dark theme and two-column layout)*
-* **[INSERT SCREENSHOT OF A MERMAID DIAGRAM OUTPUT HERE]**
+
+    
+* **<img width="2496" height="1333" alt="Ekran görüntüsü 2025-12-09 215855" src="https://github.com/user-attachments/assets/414fd147-eb7f-45da-a5d1-353fb50e24a7" />**
     *(Highlights the analytical capability)*
 
 ### Submission Links (For the Judges)
