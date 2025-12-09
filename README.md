@@ -74,7 +74,7 @@ Follow these steps to run the Melita AI Engine locally or within your Kaggle env
 
 This project is submitted to the Kaggle Gemini Hackathon, demonstrating superior prompt engineering combined with practical software integration.
 
-* **[INSERT SCREENSHOT OF YOUR CYBERPUNK MELITA UI HERE]**
+* **<img width="1248" height="667" alt="papapappapa" src="https://github.com/user-attachments/assets/eda34c81-a1cc-4abf-b318-0679b108dd10" />**
     *(Showcases the custom dark theme and two-column layout)*
 * **[INSERT SCREENSHOT OF A MERMAID DIAGRAM OUTPUT HERE]**
     *(Highlights the analytical capability)*
