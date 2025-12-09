@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Hackathon Status](https://img.shields.io/badge/Kaggle_Hackathon-Submitted-d946ef)](YOUR_KAGGLE_SUBMISSION_LINK)
 
-## 🧠 Project Overview: The Cyberpunk Code Analyst
+## 🧠 Project Overview: The Code Analyst
 
 Melita is an advanced AI Algorithm Assistant powered by **Gemini 3 Pro**, engineered to analyze code complexity and flow, supporting input via **code snippets or image screenshots**.
 
