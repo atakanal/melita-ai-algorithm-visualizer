@@ -26,7 +26,7 @@ function App() {
       if (isAnalyzing && abortControllerRef.current) {
         abortControllerRef.current.abort("offline");
         setIsAnalyzing(false);
-        setError("⚠️ İnternet bağlantısı kesildi! Lütfen bağlantınızı kontrol edin.");
+        setError("⚠️ Internet connection lost! Please check your network connection.");
       }
     };
     window.addEventListener('offline', handleOffline);
@@ -36,7 +36,7 @@ function App() {
   const handleVisualize = async () => {
     // Check connectivity before starting
     if (!navigator.onLine) {
-      setError("🌐 İnternet bağlantısı yok. Lütfen bağlanıp tekrar deneyin.");
+      setError("🌐 No internet connection detected. Please connect to the network and try again.");
       return;
     }
 
@@ -74,20 +74,20 @@ function App() {
       if (controller.signal.aborted) {
         if (controller.signal.reason === "stop") return;
         if (controller.signal.reason === "offline") {
-            setError("⚠️ İnternet bağlantısı koptu.");
+            setError("⚠️ Network connection lost.");
             return;
         }
       }
 
       // Handle specific timeout error
       if (err.message === "TIMEOUT_ERROR") {
-        console.error("Zaman aşımı gerçekleşti.");
-        setError("⏳ İşlem çok uzun sürdü (20sn). Kodunuz çok karmaşık olabilir veya sunucu yanıt vermiyor.");
+        console.error("Operation timed out.");
+        setError("⏳ The operation took too long (20s). Your code may be too complex or the server is unresponsive.");
         controller.abort("timeout");
       } 
       else {
         console.error(err);
-        setError(err.message || "Beklenmedik bir hata oluştu.");
+        setError(err.message || "An unexpected error occurred.");
       }
     } finally {
       // Only reset loading state if not aborted externally
