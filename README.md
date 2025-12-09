@@ -25,10 +25,10 @@ Melita leverages Google's cutting-edge models for high performance and sophistic
 
 | Technology | Purpose | Version |
 | :--- | :--- | :--- |
-| **Google Gemini 3 Pro** | Core analysis engine, generating JSON/Mermaid output.
-| **Python** | Backend logic, API interaction, and custom processing.
-| **Gradio** | Custom UI framework, hosting the unique Cyberpunk user interface.
-| **Mermaid.ink** | External service used to render the Mermaid code into visual diagrams (PNG/SVG).
+| **Google Gemini 3 Pro** | Core analysis engine, generating JSON/Mermaid output. | Latest
+| **Python** | Backend logic, API interaction, and custom processing. | 3.10+
+| **Gradio** | Custom UI framework, hosting the unique Cyberpunk user interface. | Latest
+| **Mermaid.ink** | External service used to render the Mermaid code into visual diagrams (PNG/SVG). | External
 
 ---
 
