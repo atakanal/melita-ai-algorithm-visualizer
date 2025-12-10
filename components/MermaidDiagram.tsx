@@ -66,7 +66,7 @@ const MermaidDiagram: React.FC<MermaidDiagramProps> = ({ chart }) => {
     const svgElement = containerRef.current?.querySelector('svg');
     
     if (!svgElement) {
-      alert("Grafik henüz hazır değil.");
+      alert("Graphic is not ready yet.");
       return;
     }
 
