@@ -102,7 +102,7 @@ export const analyzeCodeWithGemini = async (code: string): Promise<SimulationRes
     generationConfig: {
       responseMimeType: "application/json", 
       temperature: 0.1,
-      maxOutputTokens: 2000, 
+      maxOutputTokens: 8192, 
     }
   });
 
