@@ -1,6 +1,6 @@
 # Melita: AI Algorithm Visualization & Analysis Engine
 
-[![GitHub stars](https://img.shields.io/github/stars/atakanal/melita-ai-algorithm-visualizer?style=social)](https://github.com/atakanal/melita-ai-algorithm-visualizer)?t=1
+[![GitHub stars](https://img.shields.io/github/stars/atakanal/melita-ai-algorithm-visualizer?style=social)](https://github.com/atakanal/melita-ai-algorithm-visualizer)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Hackathon Status](https://img.shields.io/badge/Kaggle_Hackathon-Submitted-d946ef)](YOUR_KAGGLE_SUBMISSION_LINK)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-yellow)](https://www.python.org/)
