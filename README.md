@@ -96,7 +96,7 @@ This project is submitted to the **Kaggle Gemini Hackathon**, demonstrating supe
 | :--- | :--- |
 | **🚀 AI Studio Link (Core Prompt Logic)** | [Click to view in Google AI Studio](https://ai.studio/apps/drive/1eI3OFnf8hbrbzg6QoQlsoRB7uf_PymQL?fullscreenApplet=true) |
 | **💻 Source Code Repository** | [GitHub Repository](https://github.com/atakanal/melita-ai-algorithm-visualizer) |
-| **🎥 Video Demonstration** | *Coming Soon* |
+| **🎥 Video Demonstration** | [Video Link](https://www.youtube.com/watch?v=JF32yGTxBA4) |
 
 ---
 
