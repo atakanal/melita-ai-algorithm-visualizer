@@ -2,7 +2,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/atakanal/melita-ai-algorithm-visualizer?style=social)](https://github.com/atakanal/melita-ai-algorithm-visualizer)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Hackathon Status](https://img.shields.io/badge/Kaggle_Hackathon-Submitted-d946ef)](YOUR_KAGGLE_SUBMISSION_LINK)
+[![Hackathon Status](https://img.shields.io/badge/Kaggle_Hackathon-Submitted-d946ef)](https://kaggle.com/competitions/gemini-3/writeups/melita-gemini-hackathon)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-yellow)](https://www.python.org/)
 [![Powered by Gemini](https://img.shields.io/badge/Powered%20by-Gemini%203%20Pro-4285F4)](https://deepmind.google/technologies/gemini/)
 
